@@ -6,9 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),
-    'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
+    'Tightenco\\Collect\\' => array($vendorDir . '/tightenco/collect/src/Collect'),
+    'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Symfony\\Component\\VarDumper\\' => array($vendorDir . '/symfony/var-dumper'),
     'Log1x\\Plugin\\RedirectionVariables\\' => array($baseDir . '/src'),
-    'Illuminate\\Support\\' => array($vendorDir . '/illuminate/macroable', $vendorDir . '/illuminate/collections'),
-    'Illuminate\\Contracts\\' => array($vendorDir . '/illuminate/contracts'),
 );

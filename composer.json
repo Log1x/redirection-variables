@@ -1,43 +1,43 @@
 {
-  "name": "log1x/redirection-variables",
-  "type": "wordpress-plugin",
-  "license": "MIT",
-  "description": "Provides referer tracking variables for popular WordPress redirection plugins.",
-  "authors": [
-    {
-      "name": "Brandon Nifong",
-      "email": "brandon@tendency.me"
-    }
-  ],
-  "keywords": [
-    "wordpress"
-  ],
-  "support": {
-    "issues": "https://github.com/log1x/redirection-variables/issues"
-  },
-  "autoload": {
-    "psr-4": {
-      "Log1x\\Plugin\\RedirectionVariables\\": "src/"
-    }
-  },
-  "require": {
-    "php": ">=7.2.5",
-    "illuminate/collections": "^8.13",
-    "snowplow/referer-parser": "^0.2.0"
-  },
-  "require-dev": {
-    "squizlabs/php_codesniffer": "^3.5"
-  },
-  "scripts": {
-    "lint": [
-      "phpcs --ignore=vendor --extensions=php --standard=PSR12 ."
-    ]
-  },
-  "config": {
-    "optimize-autoloader": true,
-    "preferred-install": "dist",
-    "sort-packages": true
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true
+    "name": "log1x/redirection-variables",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "description": "Provides referer tracking variables for popular WordPress redirection plugins.",
+    "authors": [
+        {
+            "name": "Brandon Nifong",
+            "email": "brandon@tendency.me"
+        }
+    ],
+    "keywords": [
+        "wordpress"
+    ],
+    "support": {
+        "issues": "https://github.com/log1x/redirection-variables/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "Log1x\\Plugin\\RedirectionVariables\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.2.5",
+        "snowplow/referer-parser": "^0.2.0",
+        "tightenco/collect": "^8.14"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5"
+    },
+    "scripts": {
+        "lint": [
+            "phpcs --ignore=vendor --extensions=php --standard=PSR12 ."
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

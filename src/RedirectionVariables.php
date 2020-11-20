@@ -3,7 +3,8 @@
 namespace Log1x\Plugin\RedirectionVariables;
 
 use Snowplow\RefererParser\Parser;
-use Illuminate\Support\Arr;
+use Tightenco\Collect\Support\Collection;
+use Tightenco\Collect\Support\Arr;
 
 class RedirectionVariables
 {
@@ -199,7 +200,7 @@ class RedirectionVariables
             ) ? url_to_postid($this->referer) : null
         );
 
-        $variables = collect($this->variables)
+        $variables = $this->collect($this->variables)
             ->map(function ($value) {
                 if ($this->contains($value, 'utm_source')) {
                     return sanitize_title(
@@ -293,5 +294,16 @@ class RedirectionVariables
         }
 
         return false;
+    }
+
+    /**
+     * Create a new collection instance.
+     *
+     * @param  mixed $items
+     * @return \Tightenco\Collect\Support\Collection
+     */
+    protected function collect($items = [])
+    {
+        return new Collection($items);
     }
 }
