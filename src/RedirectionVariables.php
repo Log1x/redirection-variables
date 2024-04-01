@@ -2,9 +2,9 @@
 
 namespace Log1x\Plugin\RedirectionVariables;
 
+use Illuminate\Support\Arr;
+use Illuminate\Support\Collection;
 use Snowplow\RefererParser\Parser;
-use Tightenco\Collect\Support\Collection;
-use Tightenco\Collect\Support\Arr;
 
 class RedirectionVariables
 {
@@ -72,8 +72,8 @@ class RedirectionVariables
     /**
      * Initialize the plugin.
      *
-     * @param  string $path
-     * @param  string $uri
+     * @param  string  $path
+     * @param  string  $uri
      * @return void
      */
     public function __construct($path, $uri)
@@ -130,7 +130,7 @@ class RedirectionVariables
         return class_exists('\SRM_Redirect');
     }
 
-   /**
+    /**
      * Determine if Pretty Links is installed.
      *
      * @return bool
@@ -140,7 +140,7 @@ class RedirectionVariables
         return function_exists('\prli_autoloader');
     }
 
-  /**
+    /**
      * Parse any known variables in the Redirection target URL before
      * processing a redirect.
      *
@@ -176,7 +176,7 @@ class RedirectionVariables
     {
         add_filter('prli_target_url', function ($value) {
             return array_merge($value, [
-                'url' => $this->parse(Arr::get($value, 'url'))
+                'url' => $this->parse(Arr::get($value, 'url')),
             ]);
         });
     }
@@ -184,7 +184,7 @@ class RedirectionVariables
     /**
      * Parse the specified string replacing any known variables.
      *
-     * @param  string $value
+     * @param  string  $value
      * @return string
      */
     public function parse($value = null)
@@ -299,8 +299,8 @@ class RedirectionVariables
     /**
      * Create a new collection instance.
      *
-     * @param  mixed $items
-     * @return \Tightenco\Collect\Support\Collection
+     * @param  mixed  $items
+     * @return \Illuminate\Support\Collection
      */
     protected function collect($items = [])
     {
