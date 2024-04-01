@@ -9,7 +9,7 @@ This can be particularly useful for passing tracking data from your referring po
 
 ## Requirements
 
-- [PHP](https://secure.php.net/manual/en/install.php) >= 8.0
+- [PHP](https://secure.php.net/manual/en/install.php) >= 8.1
 - [Composer](https://getcomposer.org/download/)
 
 ## Installation
