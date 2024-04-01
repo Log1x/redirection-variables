@@ -21,7 +21,7 @@
     }
   },
   "require": {
-    "php": ">=7.4",
+    "php": "^8.0",
     "illuminate/collections": "^9.0|^10.0|^11.0",
     "snowplow/referer-parser": "^0.2.0"
   },
