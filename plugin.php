@@ -4,7 +4,7 @@
  * Plugin Name: Redirection Variables
  * Plugin URI:  https://github.com/log1x/redirection-variables
  * Description: Provides referer tracking variables for popular WordPress redirection plugins.
- * Version:     1.0.1
+ * Version:     1.0.2
  * Author:      Brandon Nifong
  * Author URI:  https://github.com/log1x
  * Licence:     MIT
@@ -21,9 +21,9 @@ add_action('after_setup_theme', new class
      */
     public function __invoke()
     {
-        require_once file_exists($composer = __DIR__ . '/vendor/autoload.php') ?
+        require_once file_exists($composer = __DIR__.'/vendor/autoload.php') ?
             $composer :
-            __DIR__ . '/dist/autoload.php';
+            __DIR__.'/dist/autoload.php';
 
         return new RedirectionVariables(
             plugin_dir_path(__FILE__),
